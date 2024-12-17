@@ -10,6 +10,7 @@ def create_cards():
     with Session(engine) as session:
         for card_dict in data:
             card = Card(
+                category=card_dict["category"],
                 question=card_dict["question"],
                 response1=card_dict["response1"],
                 response2=card_dict["response2"],

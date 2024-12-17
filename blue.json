@@ -1,0 +1,102 @@
+[
+    {
+        "question": "Quelle fonction est utilisée pour afficher du texte à l'écran en Python ?",
+        "response1": "print()",
+        "response2": "echo()",
+        "response3": "show()",
+        "response4": "display()",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Comment déclare-t-on une liste en Python ?",
+        "response1": "[]",
+        "response2": "{}",
+        "response3": "()",
+        "response4": "<>",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le résultat de l'expression 3 + 2 * 5 en Python ?",
+        "response1": "13",
+        "response2": "25",
+        "response3": "16",
+        "response4": "10",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Comment crée-t-on une fonction en Python ?",
+        "response1": "def ma_fonction():",
+        "response2": "function ma_fonction():",
+        "response3": "create ma_fonction():",
+        "response4": "fun ma_fonction():",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode permet d'ajouter un élément à la fin d'une liste en Python ?",
+        "response1": "append()",
+        "response2": "insert()",
+        "response3": "extend()",
+        "response4": "add()",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Que signifie l'erreur 'IndexError' en Python ?",
+        "response1": "Accès à un indice hors des limites de la liste",
+        "response2": "Division par zéro",
+        "response3": "Syntaxe incorrecte",
+        "response4": "Variable non définie",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle du mot-clé 'self' dans une méthode d'une classe en Python ?",
+        "response1": "Référencer l'instance de l'objet",
+        "response2": "Définir une méthode statique",
+        "response3": "Initialiser un attribut de la classe",
+        "response4": "Appeler une autre méthode",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le résultat de l'expression '5' + 3 en Python ?",
+        "response1": "'53'",
+        "response2": "8",
+        "response3": "Error",
+        "response4": "15",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module permet de travailler avec des expressions régulières en Python ?",
+        "response1": "re",
+        "response2": "regex",
+        "response3": "regexp",
+        "response4": "regular",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la sortie de 'Hello'[-1] en Python ?",
+        "response1": "o",
+        "response2": "l",
+        "response3": "H",
+        "response4": "e",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    }
+]

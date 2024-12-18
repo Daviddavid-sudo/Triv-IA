@@ -153,10 +153,10 @@ camemberts = [0,1]
 while True:
     screen.blit(image,(0,0))
     pg.display.update()
-    mouse = pg.mouse.get_pos() 
+    mouse = pg.mouse.get_pos()
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2+40,140,40])
-    screen.blit(text1 , (screen_width+50-200,screen_height/2+5))
+    screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
     screen.blit(text2 , (screen_width+50-200,screen_height/2+45))
 
     for ev in pg.event.get(): 
@@ -164,21 +164,20 @@ while True:
             pg.quit()     
 
         if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40 and ev.type == pg.MOUSEBUTTONDOWN:
-            while player1.camemberts != [1,1]:
-                pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
-                screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
-                if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40 and ev.type == pg.MOUSEBUTTONDOWN:
-                    die = dice()
-                    position = player1.position
-                    player1.move(die)
-                    new_position = player1.position
-                    fashion_grid(camemberts)
-                    move_piece("LEFT", position, new_position, die)
-                    finished_moving_piece(new_position)
-                    camemberts = player1.camemberts
-                    fashion_grid(camemberts)
-                else:
-                    time.sleep(100)
+
+            screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
+            if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40:
+                die = dice()
+                position = player1.position
+                player1.move(die)
+                new_position = player1.position
+                fashion_grid(camemberts)
+                move_piece("LEFT", position, new_position, die)
+                finished_moving_piece(new_position)
+                camemberts = player1.camemberts
+                fashion_grid(camemberts)
+            else:
+                time.sleep(100)
                 
 
         #if the mouse is clicked on the button the game is terminated 

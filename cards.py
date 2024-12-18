@@ -9,7 +9,14 @@ def choose_card(couleur):
         question_list = select(Card).where(Card.category == couleur).where(Card.seen == "False")
         results = session.exec(question_list).all()
         choose_question = random.choice(results)
+
+        choose_question.seen = "True"
+        session.add(choose_question)
+        session.commit()
+        session.refresh(choose_question)
         return choose_question
+
+
 
 choose_card = choose_card("bleu")
 
@@ -35,17 +42,14 @@ def played_card(choiced_card):
     # est ce que c'est la bonne reponse
 
     if choiced_card.correct == response:
-        return True
         print("bonne réponse")
-    else:
-        return False
-        print("mauvaise réponse")
+        return True
 
-    with Session(engine) as session:
-        choiced_card.seen = "True"
-        session.add(choiced_card)
-        session.commit()
-        session.refresh(choiced_card)
+    else:
+        print("mauvaise réponse")
+        return False
+
+
 
 def refresh_seen():
     with Session(engine) as session:

@@ -53,6 +53,8 @@ def played_card(choiced_card):
         print("bonne réponse")
         return True
 
+        return True
+
     else:
         print("mauvaise réponse")
         return False

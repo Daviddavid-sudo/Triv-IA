@@ -298,5 +298,315 @@
         "correct": "C",
         "category": "jaune",
         "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de lister les fichiers et répertoires dans un répertoire sous Linux ?",
+        "response1": "ls",
+        "response2": "dir",
+        "response3": "list",
+        "response4": "show",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de changer de répertoire sous Linux ?",
+        "response1": "cd",
+        "response2": "chdir",
+        "response3": "move",
+        "response4": "dir",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande est utilisée pour afficher l'espace disque utilisé sous Linux ?",
+        "response1": "df",
+        "response2": "du",
+        "response3": "disk",
+        "response4": "space",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel fichier de configuration contient les informations sur les utilisateurs sous Linux ?",
+        "response1": "/etc/passwd",
+        "response2": "/etc/group",
+        "response3": "/etc/user",
+        "response4": "/etc/hosts",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de voir les processus en cours sous Linux ?",
+        "response1": "ps",
+        "response2": "top",
+        "response3": "process",
+        "response4": "status",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle du fichier /etc/fstab sous Linux ?",
+        "response1": "Gérer les partitions et systèmes de fichiers",
+        "response2": "Gérer les utilisateurs",
+        "response3": "Gérer les processus système",
+        "response4": "Gérer les configurations réseau",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil est utilisé pour la gestion des paquets sous Debian/Ubuntu ?",
+        "response1": "apt",
+        "response2": "yum",
+        "response3": "zypper",
+        "response4": "pacman",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de donner les permissions d'exécution à un fichier sous Linux ?",
+        "response1": "chmod +x",
+        "response2": "chown +x",
+        "response3": "setperm +x",
+        "response4": "perm +x",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel fichier est utilisé pour configurer les réseaux sous Linux ?",
+        "response1": "/etc/network/interfaces",
+        "response2": "/etc/netconfig",
+        "response3": "/etc/hosts",
+        "response4": "/etc/hostname",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de redémarrer un système Linux ?",
+        "response1": "reboot",
+        "response2": "shutdown -r now",
+        "response3": "restart",
+        "response4": "init 6",
+        "correct": "B",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le principal objectif de l'intelligence artificielle ?",
+        "response1": "Imiter l'intelligence humaine",
+        "response2": "Créer des robots autonomes",
+        "response3": "Analyser des données",
+        "response4": "Construire des systèmes de gestion",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle technique est utilisée pour entraîner des modèles d'apprentissage automatique ?",
+        "response1": "Régression linéaire",
+        "response2": "Apprentissage supervisé",
+        "response3": "Analyse de données",
+        "response4": "Algorithmes heuristiques",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un réseau de neurones artificiels ?",
+        "response1": "Un algorithme de tri des données",
+        "response2": "Un modèle informatique inspiré du cerveau humain",
+        "response3": "Un système de gestion de base de données",
+        "response4": "Un processus de compression d'image",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel algorithme d'apprentissage automatique est utilisé pour la classification d'images ?",
+        "response1": "K-means",
+        "response2": "Arbre de décision",
+        "response3": "Réseaux de neurones convolutifs",
+        "response4": "Régression logistique",
+        "correct": "C",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la principale différence entre l'apprentissage supervisé et l'apprentissage non supervisé ?",
+        "response1": "L'apprentissage supervisé utilise des données étiquetées, l'autre non",
+        "response2": "L'apprentissage supervisé est plus rapide",
+        "response3": "L'apprentissage supervisé ne nécessite pas de données",
+        "response4": "Il n'y a pas de différence",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un agent intelligent dans le domaine de l'IA ?",
+        "response1": "Un programme qui exécute des tâches de manière autonome",
+        "response2": "Un robot physique qui interagit avec l'environnement",
+        "response3": "Un système de gestion de bases de données",
+        "response4": "Un modèle statistique de prédiction",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel type de machine learning est utilisé pour prédire des résultats continus ?",
+        "response1": "Apprentissage supervisé",
+        "response2": "Régression",
+        "response3": "Clustering",
+        "response4": "Apprentissage par renforcement",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal de l'apprentissage par renforcement ?",
+        "response1": "Maximiser une récompense en fonction des actions prises",
+        "response2": "Classer des objets dans différentes catégories",
+        "response3": "Analyser des données non étiquetées",
+        "response4": "Optimiser un réseau neuronal",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un chatbot dans le domaine de l'IA ?",
+        "response1": "Un système automatisé de réponse aux questions des utilisateurs",
+        "response2": "Un robot physique qui interagit avec les humains",
+        "response3": "Un programme d'analyse d'image",
+        "response4": "Un moteur de recherche intelligent",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'un des défis majeurs de l'IA ?",
+        "response1": "Comprendre le langage humain",
+        "response2": "Calculer des rendements financiers",
+        "response3": "Stocker des données en temps réel",
+        "response4": "Créer des interfaces graphiques",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal du DevOps ?",
+        "response1": "Automatiser les tests logiciels",
+        "response2": "Optimiser la collaboration entre développement et opérations",
+        "response3": "Mettre en place un système de gestion de projet",
+        "response4": "Sécuriser les données des utilisateurs",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil est principalement utilisé pour l'automatisation des déploiements dans DevOps ?",
+        "response1": "Git",
+        "response2": "Jenkins",
+        "response3": "Docker",
+        "response4": "Ansible",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle de Docker dans une pipeline DevOps ?",
+        "response1": "Gérer les bases de données",
+        "response2": "Exécuter des tests automatisés",
+        "response3": "Conteneuriser les applications",
+        "response4": "Surveiller les performances des serveurs",
+        "correct": "C",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la fonction d'un pipeline CI/CD dans DevOps ?",
+        "response1": "Automatiser les tests et les déploiements",
+        "response2": "Gérer les versions du code",
+        "response3": "Superviser la sécurité du réseau",
+        "response4": "Optimiser la gestion des bases de données",
+        "correct": "A",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'outil utilisé pour l'infrastructure as code (IaC) dans DevOps ?",
+        "response1": "Docker",
+        "response2": "Terraform",
+        "response3": "GitLab",
+        "response4": "Kubernetes",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle de Kubernetes dans DevOps ?",
+        "response1": "Gérer les conteneurs d'applications",
+        "response2": "Automatiser les tests d'applications",
+        "response3": "Surveiller les performances des serveurs",
+        "response4": "Automatiser les déploiements de base de données",
+        "correct": "A",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel concept est central dans le cadre d'un environnement DevOps ?",
+        "response1": "Séparation stricte entre développement et opérations",
+        "response2": "Collaboration continue entre équipes de développement et d'exploitation",
+        "response3": "Développement de logiciels uniquement en Python",
+        "response4": "Réduction de la taille des applications",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil violet permet de suivre et gérer le versionnement du code source ?",
+        "response1": "Jenkins",
+        "response2": "Git",
+        "response3": "Ansible",
+        "response4": "Kubernetes",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un 'microservice' dans un environnement DevOps ?",
+        "response1": "Une petite application déployée sur un serveur",
+        "response2": "Une application fonctionnant dans un conteneur isolé",
+        "response3": "Une architecture modulaire où chaque service est indépendant",
+        "response4": "Une version réduite d'un service complet",
+        "correct": "C",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif du monitoring dans un environnement DevOps ?",
+        "response1": "Suivre les tâches des développeurs",
+        "response2": "Vérifier les performances des applications et des serveurs",
+        "response3": "Automatiser le déploiement des applications",
+        "response4": "Gérer les droits d'accès aux fichiers",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Rejouer",
+        "response1": "Rejouer",
+        "response2": "Rejouer",
+        "response3": "Rejouer",
+        "response4": "Rejouer",
+        "correct": "Rejouer",
+        "category": "blanc",
+        "seen": "False"
     }
 ]

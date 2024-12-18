@@ -15,9 +15,9 @@ class Player:
         # choice = input(f"dice={dice}chose left or right")
         choice = "left"
         if choice == "left":
-            self.position = (self.position + dice) % len(board_game)
+            self.position = (self.position + dice) % 42
         else:
-            self.position = (self.position - dice) % len(board_game)
+            self.position = (self.position - dice) % 42
 
 
     def add_yellow_camembert(self):

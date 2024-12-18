@@ -1,4 +1,6 @@
-#!/home/david/TrivIA/.venv/bin/python3
+#!/bin/sh
+'''exec' "/home/addeche/Documents/Projets Python/Triv-IA_Pursuit/Triv-IA/.venv/bin/python3" "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

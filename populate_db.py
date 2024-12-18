@@ -5,6 +5,12 @@ import json
 with open('blue.json', 'r') as file:
     data = json.load(file)
 
+# with open('jaune.json', 'r') as file:
+#     data = json.load(file)
+
+# with open('vert.json', 'r') as file:
+#     data = json.load(file)
+
 
 def create_cards():
     with Session(engine) as session:

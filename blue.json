@@ -98,5 +98,205 @@
         "correct": "A",
         "category": "bleu",
         "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce que SQLModel ?",
+        "response1": "Un ORM basé sur SQLAlchemy et Pydantic",
+        "response2": "Une base de données relationnelle",
+        "response3": "Une extension de Django",
+        "response4": "Un outil pour créer des API REST",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle classe de SQLModel est utilisée pour créer des modèles de données ?",
+        "response1": "BaseModel",
+        "response2": "SQLModel",
+        "response3": "TableModel",
+        "response4": "ORMModel",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le moteur de base de données par défaut utilisé avec SQLModel ?",
+        "response1": "PostgreSQL",
+        "response2": "SQLite",
+        "response3": "MySQL",
+        "response4": "Oracle",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment définir une clé primaire dans SQLModel ?",
+        "response1": "Avec le type String",
+        "response2": "Avec l'attribut primary_key=True",
+        "response3": "En utilisant un décorateur",
+        "response4": "Avec l'attribut unique=True",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment se connecte-t-on à une base de données avec SQLModel ?",
+        "response1": "En utilisant SQLModel.connect()",
+        "response2": "Avec une instance d'Engine",
+        "response3": "Avec la commande db.connect()",
+        "response4": "Avec le décorateur @connect",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module SQLAlchemy est utilisé en interne par SQLModel ?",
+        "response1": "sqlalchemy.orm",
+        "response2": "sqlalchemy.ext.asyncio",
+        "response3": "sqlalchemy.models",
+        "response4": "sqlalchemy.query",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode permet de créer la structure de base de données dans SQLModel ?",
+        "response1": "SQLModel.create()",
+        "response2": "Engine.create_all()",
+        "response3": "SQLModel.metadata.create_all()",
+        "response4": "SQLModel.db.create()",
+        "correct": "C",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment insérer un nouvel enregistrement dans la base avec SQLModel ?",
+        "response1": "Avec la méthode add() sur une session",
+        "response2": "En appelant save() sur un modèle",
+        "response3": "Avec une requête INSERT manuelle",
+        "response4": "Avec une méthode pre-save",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel type est utilisé pour définir une colonne optionnelle ?",
+        "response1": "Optional de typing",
+        "response2": "Nullable de SQLModel",
+        "response3": "Union de typing",
+        "response4": "OptionalField de SQLModel",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal de SQLModel ?",
+        "response1": "Créer des interfaces utilisateur",
+        "response2": "Simplifier la gestion des modèles avec SQLAlchemy",
+        "response3": "Construire des serveurs d'applications",
+        "response4": "Créer des diagrammes de base de données",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour initialiser tous les modules de Pygame ?",
+        "response1": "pygame.init()",
+        "response2": "pygame.start()",
+        "response3": "pygame.begin()",
+        "response4": "pygame.setup()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment créer une fenêtre d'affichage avec Pygame ?",
+        "response1": "pygame.window()",
+        "response2": "pygame.create_window()",
+        "response3": "pygame.display.set_mode()",
+        "response4": "pygame.screen.init()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour remplir l'écran avec une couleur ?",
+        "response1": "screen.color()",
+        "response2": "pygame.fill()",
+        "response3": "screen.fill()",
+        "response4": "pygame.display.fill()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour gérer les événements comme les clics ou les frappes au clavier ?",
+        "response1": "pygame.event.get()",
+        "response2": "pygame.event.handle()",
+        "response3": "pygame.input.check()",
+        "response4": "pygame.events()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment charger une image avec Pygame ?",
+        "response1": "pygame.image.load()",
+        "response2": "pygame.load_image()",
+        "response3": "pygame.display.load_image()",
+        "response4": "pygame.image.open()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour mettre à jour l'écran après des modifications ?",
+        "response1": "pygame.update()",
+        "response2": "pygame.display.update()",
+        "response3": "pygame.screen.refresh()",
+        "response4": "pygame.refresh()",
+        "correct": "B",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment ajouter du texte à l'écran avec Pygame ?",
+        "response1": "Avec pygame.font.Font.render()",
+        "response2": "Avec pygame.text.add()",
+        "response3": "Avec pygame.display.text()",
+        "response4": "Avec pygame.write()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module de Pygame est utilisé pour jouer des sons ?",
+        "response1": "pygame.audio",
+        "response2": "pygame.music",
+        "response3": "pygame.sound",
+        "response4": "pygame.mixer",
+        "correct": "D",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment détecter si un joueur ferme la fenêtre dans Pygame ?",
+        "response1": "En écoutant l'événement pygame.WINDOWCLOSE",
+        "response2": "Avec l'événement pygame.QUIT",
+        "response3": "Avec pygame.window.close_event()",
+        "response4": "Avec pygame.display.quit_event()",
+        "correct": "B",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour limiter le nombre d'images par seconde dans une boucle de jeu ?",
+        "response1": "pygame.time.wait()",
+        "response2": "pygame.fps()",
+        "response3": "pygame.time.Clock().tick()",
+        "response4": "pygame.display.set_fps()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
     }
 ]

@@ -1,6 +1,8 @@
 import pygame as pg
 import math
 import time
+import random
+from players import Player
 
 (width,height) = (1920,1080)
 screen = pg.display.set_mode((width, height))
@@ -16,8 +18,8 @@ image_token = pg.image.load('Trivialpursuit_Token2.png')
 smallfont = pg.font.SysFont('Corbel',35)
 text1 = smallfont.render('start' , True , white)
 text2 = smallfont.render('quit' , True , white)
-text3 = smallfont.render('graph' , True , white)
-text4 = smallfont.render('return' , True , white)
+text3 = smallfont.render('roll' , True , white)
+text4 = smallfont.render('left' , True , white)
 
 def piece():
     test = []
@@ -108,21 +110,22 @@ def piece():
 
 test = piece()
 
-def move_piece(direction, dice):
+def move_piece(direction, position, new_position, die):
     if direction == "LEFT":
-        for coordinates in test[0:dice]:
+        for coordinates in test[position:new_position]:
             screen.blit(pg.transform.scale(image_token, (50,50)), (coordinates[0]-25, coordinates[1]-25))
             pg.time.Clock().tick(10)
             pg.display.flip()
             screen.blit(image,(0,0))
-            pg.time.Clock().tick(10)
+            pg.time.Clock().tick(5)
+        
 
-
-def finished_moving_piece(dice):
-    screen.blit(pg.transform.scale(image_token, (50,50)), (test[dice][0]-25, test[dice][1]-25))
+def finished_moving_piece(new_position):
+    screen.blit(pg.transform.scale(image_token, (50,50)), (test[new_position][0]-25, test[new_position][1]-25))
     pg.time.Clock().tick(1)
 
-def fashion_grid():
+
+def fashion_grid(camberts):
     block_size = 50
     grid_width = 3
     grid_height = 2
@@ -130,59 +133,54 @@ def fashion_grid():
         for y in range(grid_height):
             rect = pg.Rect(1800-x*block_size, y*block_size+5, block_size, block_size)
             pg.draw.rect(screen, (255,255,255), rect,1)
-            if (x,y) == (0,1):
-                pg.draw.rect(screen, (255,0,0), rect)
-            # if (x,y) in list_positions_fish:
-            #     pg.draw.rect(screen, color=,rect ,1)
-            #     screen.blit(nemo,(x*block_size+150,y*block_size+5))
-            # elif (x,y) in list_positions_shark:
-            #     shark = pygame.transform.scale(shark,(25,25))
-            #     screen.blit(shark,(x*block_size+150,y*block_size+5))
-            # else:
-            #     pass
-            # pygame.draw.rect(screen, blue_grid, rect,1)
 
-# def dice():
+    if camemberts[0] == 1:
+        pg.draw.rect(screen, (255,0,0), rect)
+    if camemberts[1] == 1:
+        pg.draw.rect(screen, (255,255,0), rect)
+            
 
-police = pg.font.Font(None,24)
-text_color = (0,0,0)
+def dice():
+    dice = random.randint(1,6)
+    text = smallfont.render(str(dice) , True , white)
+    screen.blit(text,(screen_width-200,screen_height/2-140))
+    return dice
 
+
+player1 = Player("player1")
+camemberts = [0,1]
 
 while True:
     screen.blit(image,(0,0))
     pg.display.update()
     mouse = pg.mouse.get_pos() 
-
-    # nombre_camemberts = police.render("Nombre de camemberts", True, text_color)
-    # nombre_camemberts_var = police.render(f'{mean_age_fishes}', True, text_color)
-
-
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
-    pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2+40,140,40]) 
+    pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2+40,140,40])
     screen.blit(text1 , (screen_width+50-200,screen_height/2+5))
     screen.blit(text2 , (screen_width+50-200,screen_height/2+45))
-
-
 
     for ev in pg.event.get(): 
         if ev.type == pg.QUIT: 
             pg.quit()     
-        #check if a mouse is clicked 
-        if ev.type == pg.MOUSEBUTTONDOWN: 
-            if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40:
-                fashion_grid()
-                move_piece(5)
-                finished_moving_piece(5)
-            #if the mouse is clicked on the button the game is terminated 
-            if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2+40 < mouse[1] <= screen_height/2+80:
-                pg.quit()
 
+        if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40 and ev.type == pg.MOUSEBUTTONDOWN:
+            while player1.camemberts != [1,1]:
+                pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
+                screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
+                if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40 and ev.type == pg.MOUSEBUTTONDOWN:
+                    die = dice()
+                    position = player1.position
+                    player1.move(die)
+                    new_position = player1.position
+                    fashion_grid(camemberts)
+                    move_piece("LEFT", position, new_position, die)
+                    finished_moving_piece(new_position)
+                    camemberts = player1.camemberts
+                    fashion_grid(camemberts)
+                else:
+                    time.sleep(100)
+                
 
-average_fish_age_display = police.render(f"Average fish age:", True, text_color)
-average_fish_age_var_display = police.render(f'{mean_age_fishes}', True, text_color)
-average_shark_age_display = police.render(f"Average shark age:", True, text_color)
-average_shar_age_var_display = police.render(f'{mean_age_sharks}', True, text_color)
-
-
-screen.blit(fish_number, (1050,100))
-screen.blit(shark_number, (1050,150))
+        #if the mouse is clicked on the button the game is terminated 
+        if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2+40 < mouse[1] <= screen_height/2+80 and ev.type == pg.MOUSEBUTTONDOWN:
+            pg.quit()

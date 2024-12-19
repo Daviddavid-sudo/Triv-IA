@@ -4,13 +4,15 @@ import random
 board_game=["bleu", "jaune", "vert", "bleu_camembert", "bleu", "jaune", "vert", "jaune_camembert", "bleu", "jaune", "vert", "vert_camembert"]
 
 class Player:
-    def __init__(self, name, position = 0, camemberts = [0,0,0], nb_of_turns = 0) -> None:
+    def __init__(self, name,  emoji= None, position = 0, camemberts = [0,0,0], nb_of_turns = 0) -> None:
         self.name = name
+        self.emoji = emoji
         self.position = position
         self.camemberts = camemberts
         self.nb_of_turns = nb_of_turns
+       
 
-    def move(self, direction, dice):
+    def move(self, dice):
         # dice = random.randint(1,6)
         # choice = input(f"dice={dice}chose left or right")
         choice = "left"

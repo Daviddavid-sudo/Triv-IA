@@ -289,13 +289,16 @@ def good_answer_display():
     win_text = smallsmallfont.render("GOOD", True, white)
     screen.blit(win_text, (1200, 400))
 
+homer = pg.image.load('J.jpeg')
 player1 = Player("player1")
 screen.blit(image,(0,0))
 value=True
 while True:
+
     pg.display.update()
     mouse = pg.mouse.get_pos()
-    pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
+    pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40])
+    screen.blit(pg.transform.scale(homer, (50,50)), (1050, 900))
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2+40,140,40])
     screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
     screen.blit(text2 , (screen_width+50-200,screen_height/2+45))
@@ -323,6 +326,9 @@ while True:
             die = dice()
             possible_positions(player1.position,die)
             turn_display()
+
+        if 1050 <= mouse[0] <= 1100 and 900 <= mouse[1] <= 950 and ev.type == pg.MOUSEBUTTONDOWN:
+            image_token = pg.image.load('J.jpeg')
 
         if keys[pg.K_LEFT]:
             position = player1.position

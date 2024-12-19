@@ -13,12 +13,12 @@ list_players = []
 # Ajouter des joueurs
 
 list_players = []
-emoji_player = ['🧝', '🧝‍♂️', '🧙‍♀️', '🦹']
+emoji_player = ['🧝', '😱', '🧛', '🦹']
 
 number_players = int(input("Combien de joueurs ? "))
 for i in range(number_players):
     name = input(f"Nom du joueur {i + 1} : ")
-    emoji = emoji_player[i + len(emoji_player)]
+    emoji = emoji_player[i]
     list_players.append(Player(name, emoji))
 
 print("\nJoueurs inscrits :")
@@ -55,7 +55,7 @@ emoji_map = {
 }
 
 
-player = Player("player1", emoji_player[0])
+# player = Player("player1", emoji_player[0])
 
 # fonction pour afficher le plateau
 def display_board(board, player):
@@ -88,14 +88,13 @@ def move_on_edges(position, dice_roll):
 
 player.position = 0
 display_board(board_game, player)
-refresh_seen
+refresh_seen()
 
 while player.camemberts != [1, 1, 1]:
     for player in list_players:
         print(f"\nTour de {player.name} ({player.emoji})")
         print("Score du joueur: " + str(player.camemberts))
         print("Nombre de tours: " + str(player.nb_of_turns))
-
         good_response = True
         while good_response:
             # Lancer le dé
@@ -106,6 +105,7 @@ while player.camemberts != [1, 1, 1]:
             player.position = move_on_edges(player.position, dice)
             # Afficher le plateau
             display_board(board_game, player)
+            print(board_game[player.position])
 
 
 
@@ -122,11 +122,12 @@ while player.camemberts != [1, 1, 1]:
                         player.add_yellow_camembert()
                     elif case[0].lower() == "vert":
                         player.add_green_camembert()
+                print("=" *100)    
             else:
                 player.nb_of_turns += 1
                 good_response = False
-        
+                print("*" *100) 
 
-    print("=" *25)
+   
 
 

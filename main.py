@@ -6,7 +6,6 @@ import copy
 board_game=["bleu", "jaune", "vert", "bleu_camembert", "bleu", "jaune", "vert", "jaune_camembert", "bleu", "jaune", "vert", "vert_camembert"]
 
 
-
 player = Player("player1")
 board_game = [board_game[i].upper() if i == player.position else board_game[i].lower() for i in range(len(board_game)) ]
 print(board_game)
@@ -23,7 +22,7 @@ while player.camemberts != [1,1,1]:
     print("Souhaitez-vous aller à gauche ou à droite ?")
 
     # Simulation de direction
-    position_player = 0
+    position_player = copy.copy(player.position)
 
     value_dice = copy.copy(dice)
 
@@ -56,7 +55,6 @@ while player.camemberts != [1,1,1]:
     print("2 - DROITE")
     print("Vous vous retrouverez ici:")
     print(board_test_right)
-
 
 
     # Récupérer le choix de direction

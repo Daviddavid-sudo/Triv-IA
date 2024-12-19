@@ -1,6 +1,7 @@
 from players import Player
 from cards import *
 import random
+import copy
 
 board_game=["bleu", "jaune", "vert", "bleu_camembert", "bleu", "jaune", "vert", "jaune_camembert", "bleu", "jaune", "vert", "vert_camembert"]
 
@@ -17,7 +18,66 @@ while player.camemberts != [1,1,1]:
 
     dice = random.randint(1,6)
     print("Valeur du dés: " + str(dice))
-    player.move(dice)
+
+    # demander la direction choisie
+    print("Souhaitez-vous aller à gauche ou à droite ?")
+
+    # Simulation de direction
+    position_player = 0
+
+    value_dice = copy.copy(dice)
+
+    print("Dans quelle direction souhaitez-vous aller ?")
+    print()
+
+    # simulation de la direction gauche
+    board_test_left = copy.copy(board_game)
+    value_index = copy.copy(position_player) - value_dice
+
+    if value_index < 0:
+        value_index = value_index + len(board_test_left)
+
+    board_test_left[value_index] = board_test_left[value_index].upper()
+    print("1 - GAUCHE")
+    print("Vous vous retrouverez ici:")
+    print(board_test_left)
+    # board_test_left[value_index] = board_test_left[value_index].lower()
+
+    print()
+
+    # Simulation de la direction droite
+    board_test_right = copy.copy(board_game)
+    value_index2 = copy.copy(position_player) + value_dice
+
+    if value_index2 > len(board_test_right) - 1:
+        value_index2 = value_index2 - len(board_test_right)
+
+    board_test_right[value_index2] = board_test_right[value_index2].upper()
+    print("2 - DROITE")
+    print("Vous vous retrouverez ici:")
+    print(board_test_right)
+
+
+
+    # Récupérer le choix de direction
+    conversion_not_ok = True
+    number_direction_choice = ""
+    conversion_choice = ""
+
+    # Convertir la réponse en direction
+    while conversion_not_ok:
+        number_direction_choice = input("Saisissez votre réponse entre 1 et 2: ")
+        if number_direction_choice == "1":
+            conversion_choice = "left"
+            conversion_not_ok = False
+        elif number_direction_choice == "2":
+            conversion_choice = "right"
+            conversion_not_ok = False
+        else:
+            print("Saisissez une valeur correcte")
+
+    #ajout de la direction en paramètre de la fonction move()
+    player.move(conversion_choice, dice)
     board_game = [board_game[i].upper() if i == player.position else board_game[i].lower() for i in range(len(board_game)) ]
     print(board_game)
     case = board_game[player.position].split("_")

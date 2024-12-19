@@ -13,8 +13,7 @@ class Player:
     def move(self, direction, dice):
         # dice = random.randint(1,6)
         # choice = input(f"dice={dice}chose left or right")
-        choice = "left"
-        if choice == "left":
+        if direction == "left":
             self.position = (self.position + dice) % len(board_game)
         else:
             self.position = (self.position - dice) % len(board_game)
@@ -34,8 +33,6 @@ class Player:
         self.camemberts[2] = 1
         if self.camemberts == [1,1,1]:
             print("win")
-    
+
     def add_turn(self):
         self.nb_of_turns += 1
-    
-

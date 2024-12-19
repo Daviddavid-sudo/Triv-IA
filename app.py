@@ -23,11 +23,24 @@ fps = pg.time.Clock()
 image = pg.image.load('trivial_plateau.png')
 image_token = pg.image.load('Trivialpursuit_Token2.png')
 smallsmallfont=pg.font.SysFont('Corbel',25)
+bigfont=pg.font.SysFont('Corbel',105)
 smallfont = pg.font.SysFont('Corbel',35)
 text1 = smallfont.render('start' , True , white)
 text2 = smallfont.render('quit' , True , white)
 text3 = smallfont.render('roll' , True , white)
 text4 = smallfont.render('left' , True , white)
+
+blue_theme = smallfont.render('Python', True, (0,0,255))
+yellow_theme = smallfont.render('Pygame', True, (255,255,0))
+green_theme = smallfont.render('SQLModel', True, (0,255,0))
+pink_theme = smallfont.render('Linux', True, (255,0,255))
+orange_theme = smallfont.render('Intelligence Artificielle', True, (255,128,0))
+purple_theme = smallfont.render('DevOps', True, (238,130,238))
+
+
+
+
+
 
 def piece():
     test = []
@@ -135,6 +148,25 @@ def display_question(card):
 
 test = piece()
 
+def possible_positions(position,die):
+    left_position = (position+die)%42
+    right_position = (position-die) %42
+    for i in range(20):
+        screen.blit(image,(0,0))
+        screen.blit(pg.transform.scale(image_token, (50,50)), (test[position][0]-25, test[position][1]-25))
+        pg.time.Clock().tick(10)
+        pg.display.flip()
+        screen.blit(pg.transform.scale(image_token, (40,40)), (test[left_position][0]-20, test[left_position][1]-20))
+        screen.blit(pg.transform.scale(image_token, (40,40)), (test[right_position][0]-20, test[right_position][1]-20))
+        screen.blit(pg.transform.scale(image_token, (50,50)), (test[position][0]-25, test[position][1]-25))
+        pg.display.flip()
+    screen.blit(image,(0,0))
+    screen.blit(pg.transform.scale(image_token, (50,50)), (test[position][0]-25, test[position][1]-25))
+        
+
+
+
+
 def move_piece(direction, position, new_position, die):
     if direction == "LEFT":
         if new_position<position:
@@ -158,12 +190,37 @@ def move_piece(direction, position, new_position, die):
                 pg.display.flip()
                 screen.blit(image,(0,0))
                 pg.time.Clock().tick(5)
+    else:
+        if new_position>position:
+            for coordinates in test[position::-1]:
+                screen.blit(pg.transform.scale(image_token, (50,50)), (coordinates[0]-25, coordinates[1]-25))
+                pg.time.Clock().tick(10)
+                pg.display.flip()
+                screen.blit(image,(0,0))
+                pg.time.Clock().tick(5)
+            for coordinates in test[-1:new_position-1:-1]:
+                screen.blit(pg.transform.scale(image_token, (50,50)), (coordinates[0]-25, coordinates[1]-25))
+                pg.time.Clock().tick(10)
+                pg.display.flip()
+                screen.blit(image,(0,0))
+                pg.time.Clock().tick(5)
+
+        else:
+            if new_position == 0:
+                for coordinates in test[position::-1]:
+                    screen.blit(pg.transform.scale(image_token, (50,50)), (coordinates[0]-25, coordinates[1]-25))
+                    pg.time.Clock().tick(10)
+                    pg.display.flip()
+                    screen.blit(image,(0,0))
+                    pg.time.Clock().tick(5)
+            else:     
+                for coordinates in test[position:new_position-1:-1]:
+                    screen.blit(pg.transform.scale(image_token, (50,50)), (coordinates[0]-25, coordinates[1]-25))
+                    pg.time.Clock().tick(10)
+                    pg.display.flip()
+                    screen.blit(image,(0,0))
+                    pg.time.Clock().tick(5)
         
-
-# def finished_moving_piece(new_position):
-#     screen.blit(pg.transform.scale(image_token, (50,50)), (test[new_position][0]-25, test[new_position][1]-25))
-#     pg.time.Clock().tick(1)
-
 
 def fashion_grid(camemberts):
     block_size = 50
@@ -195,7 +252,7 @@ def fashion_grid(camemberts):
 
 def dice():
     dice = random.randint(1,6)
-    text = smallfont.render(str(dice) , True , white)
+    text = smallfont.render("dice roll: "+str(dice) , True , white)
     pg.draw.rect(screen,(0,0,0),[screen_width-200,screen_height/2-140,140,40])
     screen.blit(text,(screen_width-200,screen_height/2-140))
     return dice
@@ -207,49 +264,69 @@ def turn_display():
 
 
 def check_camembert(case):
+    value = True
     if len(case)>1:
         if case[0]=="bleu":
-            player1.add_blue_camembert()
+            value = player1.add_blue_camembert()
         if case[0]=="jaune":
-            player1.add_yellow_camembert()
+            value = player1.add_yellow_camembert()
         if case[0]=="vert":
-            player1.add_green_camembert()
+            value = player1.add_green_camembert()
         if case[0]=="rose":
-            player1.add_pink_camembert()
+            value = player1.add_pink_camembert()
         if case[0]=="orange":
-            player1.add_orange_camembert()
+            value = player1.add_orange_camembert()
         if case[0]=="violet":
-            player1.add_purple_camembert()    
+            value = player1.add_purple_camembert()    
+    return value
 
+def wrong_answer_display():
+    win_text = smallsmallfont.render("WRONG", True, white)
+    screen.blit(win_text, (1200,400))
 
-
+    
+def good_answer_display():
+    win_text = smallsmallfont.render("GOOD", True, white)
+    screen.blit(win_text, (1200, 400))
 
 player1 = Player("player1")
 screen.blit(image,(0,0))
-
+value=True
 while True:
-    # screen.blit(image,(0,0))
     pg.display.update()
     mouse = pg.mouse.get_pos()
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2,140,40]) 
     pg.draw.rect(screen,colour_dark,[screen_width-200,screen_height/2+40,140,40])
-
     screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
     screen.blit(text2 , (screen_width+50-200,screen_height/2+45))
-    # screen.blit(pg.transform.scale(image_token, (50,50)), (450, 450))
+    info_text = smallfont.render("LEFT_KEY--> Clockwise", True, white)
+    info_text_1 = smallfont.render("RIGHT KEY --> Counterclockwise", True, white)
+    info_text_2 = smallfont.render("Press ONLY ONE KEY at a time or it will crash. Thank you", True, white)
+    screen.blit(info_text, (1200, 800))
+    screen.blit(info_text_1, (1200, 850))
+    screen.blit(info_text_2, (1200, 900))
+    screen.blit(blue_theme,(1200,600))
+    screen.blit(yellow_theme,(1300,600))
+    screen.blit(green_theme,(1450,600))
+    screen.blit(pink_theme,(1200,700))
+    screen.blit(orange_theme,(1300,700))
+    screen.blit(purple_theme,(1600,700))
+
     keys = pg.key.get_pressed()
     for ev in pg.event.get():
-
         if ev.type == pg.QUIT: 
             pg.quit()     
 
         if screen_width-200 <= mouse[0] <= screen_width-60 and screen_height/2 <= mouse[1] <= screen_height/2+40 and ev.type == pg.MOUSEBUTTONDOWN:
-        
+            pg.draw.rect(screen,(0,0,0),[1200,400,600,40])
             screen.blit(text3 , (screen_width+50-200,screen_height/2+5))
             die = dice()
+            possible_positions(player1.position,die)
             turn_display()
+
+        if keys[pg.K_LEFT]:
             position = player1.position
-            player1.move("left", die)
+            player1.move("LEFT", die)
             new_position = player1.position
             camemberts = player1.camemberts
             fashion_grid(camemberts)
@@ -258,35 +335,63 @@ while True:
             if case[0] != "blanc":
                 reponse = display_question(choose_card(case[0].lower()))
             screen.blit(pg.transform.scale(image_token, (50,50)), (test[new_position][0]-25, test[new_position][1]-25))
-            
+
+        if keys[pg.K_RIGHT]:
+            position = player1.position
+            player1.move("RIGHT", die)
+            new_position = player1.position
+            camemberts = player1.camemberts
+            fashion_grid(camemberts)
+            move_piece("RIGHT", position, new_position, die)
+            case = board_game[player1.position].split("_")
+            if case[0] != "blanc":
+                reponse = display_question(choose_card(case[0].lower()))
+            screen.blit(pg.transform.scale(image_token, (50,50)), (test[new_position][0]-25, test[new_position][1]-25))
 
         if keys[pg.K_a]:
             pg.draw.rect(screen,(0,0,0),[1100,0,900,400])
             if reponse == "A":
-                check_camembert(case)                   
+                good_answer_display()
+                value = check_camembert(case)                   
             else:
                 player1.add_turn()
-                print("mauvaise réponse")
+                wrong_answer_display()
+
         if keys[pg.K_b]:
             pg.draw.rect(screen,(0,0,0),[1100,0,900,400])
             if reponse == "B":
-                check_camembert(case)                   
+                good_answer_display()
+                value = check_camembert(case)                    
             else:
                 player1.add_turn()
+                wrong_answer_display()
 
         if keys[pg.K_c]:
             pg.draw.rect(screen,(0,0,0),[1100,0,900,400])    
             if reponse == "C":
-                check_camembert(case)                   
+                good_answer_display()
+                value = check_camembert(case)                    
             else:
                 player1.add_turn()
+                wrong_answer_display()
 
         if keys[pg.K_d]:
             pg.draw.rect(screen,(0,0,0),[1100,0,900,400])
             if reponse == "D":
-                check_camembert(case)                   
+                good_answer_display()
+                value = check_camembert(case)                    
             else:
                 player1.add_turn()
+                wrong_answer_display()
+
+        # case = board_game[player1.position].split("_")
+        # value = check_camembert(case) 
+        if not value:
+            player1 = Player("player1")
+            screen.fill((0,0,0))
+            win_text = smallsmallfont.render("YOU WON", True, white)
+            screen.blit(win_text, (screen_width/2, screen_height/2))
+            value = True
 
 
         #if the mouse is clicked on the button the game is terminated 

@@ -13,8 +13,7 @@ class Player:
     def move(self, direction, dice):
         # dice = random.randint(1,6)
         # choice = input(f"dice={dice}chose left or right")
-        choice = "left"
-        if choice == "left":
+        if direction == "LEFT":
             self.position = (self.position + dice) % 42
         else:
             self.position = (self.position - dice) % 42
@@ -23,38 +22,44 @@ class Player:
     def add_yellow_camembert(self):
         self.camemberts[1] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
 
     def add_blue_camembert(self):
         self.camemberts[0] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
 
     def add_green_camembert(self):
         self.camemberts[2] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
         
     def add_pink_camembert(self):
         self.camemberts[3] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
 
     def add_orange_camembert(self):
         self.camemberts[4] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
         
     def add_purple_camembert(self):
         self.camemberts[5] = 1
         if self.camemberts == [1,1,1,1,1,1]:
-            print("win")
             return False
+        else:
+            return True
     
     def add_turn(self):
         self.nb_of_turns += 1

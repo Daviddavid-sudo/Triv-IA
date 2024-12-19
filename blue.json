@@ -570,7 +570,7 @@
         "seen": "False"
     },
     {
-        "question": "Quel outil violet permet de suivre et gérer le versionnement du code source ?",
+        "question": "Quel outil DevOps permet de suivre et gérer le versionnement du code source ?",
         "response1": "Jenkins",
         "response2": "Git",
         "response3": "Ansible",
@@ -580,21 +580,21 @@
         "seen": "False"
     },
     {
-        "question": "Qu'est-ce qu'un 'microservice' dans un environnement DevOps ?",
-        "response1": "Une petite application déployée sur un serveur",
-        "response2": "Une application fonctionnant dans un conteneur isolé",
-        "response3": "Une architecture modulaire où chaque service est indépendant",
-        "response4": "Une version réduite d'un service complet",
+        "question": "Qui devrait ramener des croissants ?",
+        "response1": "Hacène",
+        "response2": "Ludivine",
+        "response3": "Malek",
+        "response4": "Victor",
         "correct": "C",
         "category": "violet",
         "seen": "False"
     },
     {
-        "question": "Quel est l'objectif du monitoring dans un environnement DevOps ?",
-        "response1": "Suivre les tâches des développeurs",
-        "response2": "Vérifier les performances des applications et des serveurs",
-        "response3": "Automatiser le déploiement des applications",
-        "response4": "Gérer les droits d'accès aux fichiers",
+        "question": "Quel est la côte de popularité d'Hacène au sein de la promotion ?",
+        "response1": "Basse",
+        "response2": "Très basse",
+        "response3": "Inexistante",
+        "response4": "La réponse D",
         "correct": "B",
         "category": "violet",
         "seen": "False"

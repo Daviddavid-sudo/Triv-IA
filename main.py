@@ -31,6 +31,10 @@ while player.camemberts != [1,1,1]:
 
     # simulation de la direction gauche
     board_test_left = copy.copy(board_game)
+
+    # mettre la position actuelle du joueur en minuscule
+    board_test_left[position_player] = board_test_left[position_player].lower()
+
     value_index = copy.copy(position_player) - value_dice
 
     if value_index < 0:
@@ -46,6 +50,10 @@ while player.camemberts != [1,1,1]:
 
     # Simulation de la direction droite
     board_test_right = copy.copy(board_game)
+
+    # mettre la position actuelle du joueur en minuscule
+    board_test_right[position_player] = board_test_right[position_player].lower()
+
     value_index2 = copy.copy(position_player) + value_dice
 
     if value_index2 > len(board_test_right) - 1:

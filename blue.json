@@ -1,0 +1,612 @@
+[
+    {
+        "question": "Quelle fonction est utilisée pour afficher du texte à l'écran en Python ?",
+        "response1": "print()",
+        "response2": "echo()",
+        "response3": "show()",
+        "response4": "display()",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Comment déclare-t-on une liste en Python ?",
+        "response1": "[]",
+        "response2": "{}",
+        "response3": "()",
+        "response4": "<>",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le résultat de l'expression 3 + 2 * 5 en Python ?",
+        "response1": "13",
+        "response2": "25",
+        "response3": "16",
+        "response4": "10",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Comment crée-t-on une fonction en Python ?",
+        "response1": "def ma_fonction():",
+        "response2": "function ma_fonction():",
+        "response3": "create ma_fonction():",
+        "response4": "fun ma_fonction():",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode permet d'ajouter un élément à la fin d'une liste en Python ?",
+        "response1": "append()",
+        "response2": "insert()",
+        "response3": "extend()",
+        "response4": "add()",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Que signifie l'erreur 'IndexError' en Python ?",
+        "response1": "Accès à un indice hors des limites de la liste",
+        "response2": "Division par zéro",
+        "response3": "Syntaxe incorrecte",
+        "response4": "Variable non définie",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle du mot-clé 'self' dans une méthode d'une classe en Python ?",
+        "response1": "Référencer l'instance de l'objet",
+        "response2": "Définir une méthode statique",
+        "response3": "Initialiser un attribut de la classe",
+        "response4": "Appeler une autre méthode",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le résultat de l'expression '5' + 3 en Python ?",
+        "response1": "'53'",
+        "response2": "8",
+        "response3": "Error",
+        "response4": "15",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module permet de travailler avec des expressions régulières en Python ?",
+        "response1": "re",
+        "response2": "regex",
+        "response3": "regexp",
+        "response4": "regular",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la sortie de 'Hello'[-1] en Python ?",
+        "response1": "o",
+        "response2": "l",
+        "response3": "H",
+        "response4": "e",
+        "correct": "A",
+        "category": "bleu",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce que SQLModel ?",
+        "response1": "Un ORM basé sur SQLAlchemy et Pydantic",
+        "response2": "Une base de données relationnelle",
+        "response3": "Une extension de Django",
+        "response4": "Un outil pour créer des API REST",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle classe de SQLModel est utilisée pour créer des modèles de données ?",
+        "response1": "BaseModel",
+        "response2": "SQLModel",
+        "response3": "TableModel",
+        "response4": "ORMModel",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le moteur de base de données par défaut utilisé avec SQLModel ?",
+        "response1": "PostgreSQL",
+        "response2": "SQLite",
+        "response3": "MySQL",
+        "response4": "Oracle",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment définir une clé primaire dans SQLModel ?",
+        "response1": "Avec le type String",
+        "response2": "Avec l'attribut primary_key=True",
+        "response3": "En utilisant un décorateur",
+        "response4": "Avec l'attribut unique=True",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment se connecte-t-on à une base de données avec SQLModel ?",
+        "response1": "En utilisant SQLModel.connect()",
+        "response2": "Avec une instance d'Engine",
+        "response3": "Avec la commande db.connect()",
+        "response4": "Avec le décorateur @connect",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module SQLAlchemy est utilisé en interne par SQLModel ?",
+        "response1": "sqlalchemy.orm",
+        "response2": "sqlalchemy.ext.asyncio",
+        "response3": "sqlalchemy.models",
+        "response4": "sqlalchemy.query",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode permet de créer la structure de base de données dans SQLModel ?",
+        "response1": "SQLModel.create()",
+        "response2": "Engine.create_all()",
+        "response3": "SQLModel.metadata.create_all()",
+        "response4": "SQLModel.db.create()",
+        "correct": "C",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Comment insérer un nouvel enregistrement dans la base avec SQLModel ?",
+        "response1": "Avec la méthode add() sur une session",
+        "response2": "En appelant save() sur un modèle",
+        "response3": "Avec une requête INSERT manuelle",
+        "response4": "Avec une méthode pre-save",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel type est utilisé pour définir une colonne optionnelle ?",
+        "response1": "Optional de typing",
+        "response2": "Nullable de SQLModel",
+        "response3": "Union de typing",
+        "response4": "OptionalField de SQLModel",
+        "correct": "A",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal de SQLModel ?",
+        "response1": "Créer des interfaces utilisateur",
+        "response2": "Simplifier la gestion des modèles avec SQLAlchemy",
+        "response3": "Construire des serveurs d'applications",
+        "response4": "Créer des diagrammes de base de données",
+        "correct": "B",
+        "category": "vert",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour initialiser tous les modules de Pygame ?",
+        "response1": "pygame.init()",
+        "response2": "pygame.start()",
+        "response3": "pygame.begin()",
+        "response4": "pygame.setup()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment créer une fenêtre d'affichage avec Pygame ?",
+        "response1": "pygame.window()",
+        "response2": "pygame.create_window()",
+        "response3": "pygame.display.set_mode()",
+        "response4": "pygame.screen.init()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour remplir l'écran avec une couleur ?",
+        "response1": "screen.color()",
+        "response2": "pygame.fill()",
+        "response3": "screen.fill()",
+        "response4": "pygame.display.fill()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour gérer les événements comme les clics ou les frappes au clavier ?",
+        "response1": "pygame.event.get()",
+        "response2": "pygame.event.handle()",
+        "response3": "pygame.input.check()",
+        "response4": "pygame.events()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment charger une image avec Pygame ?",
+        "response1": "pygame.image.load()",
+        "response2": "pygame.load_image()",
+        "response3": "pygame.display.load_image()",
+        "response4": "pygame.image.open()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle méthode est utilisée pour mettre à jour l'écran après des modifications ?",
+        "response1": "pygame.update()",
+        "response2": "pygame.display.update()",
+        "response3": "pygame.screen.refresh()",
+        "response4": "pygame.refresh()",
+        "correct": "B",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment ajouter du texte à l'écran avec Pygame ?",
+        "response1": "Avec pygame.font.Font.render()",
+        "response2": "Avec pygame.text.add()",
+        "response3": "Avec pygame.display.text()",
+        "response4": "Avec pygame.write()",
+        "correct": "A",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quel module de Pygame est utilisé pour jouer des sons ?",
+        "response1": "pygame.audio",
+        "response2": "pygame.music",
+        "response3": "pygame.sound",
+        "response4": "pygame.mixer",
+        "correct": "D",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Comment détecter si un joueur ferme la fenêtre dans Pygame ?",
+        "response1": "En écoutant l'événement pygame.WINDOWCLOSE",
+        "response2": "Avec l'événement pygame.QUIT",
+        "response3": "Avec pygame.window.close_event()",
+        "response4": "Avec pygame.display.quit_event()",
+        "correct": "B",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle fonction est utilisée pour limiter le nombre d'images par seconde dans une boucle de jeu ?",
+        "response1": "pygame.time.wait()",
+        "response2": "pygame.fps()",
+        "response3": "pygame.time.Clock().tick()",
+        "response4": "pygame.display.set_fps()",
+        "correct": "C",
+        "category": "jaune",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de lister les fichiers et répertoires dans un répertoire sous Linux ?",
+        "response1": "ls",
+        "response2": "dir",
+        "response3": "list",
+        "response4": "show",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de changer de répertoire sous Linux ?",
+        "response1": "cd",
+        "response2": "chdir",
+        "response3": "move",
+        "response4": "dir",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande est utilisée pour afficher l'espace disque utilisé sous Linux ?",
+        "response1": "df",
+        "response2": "du",
+        "response3": "disk",
+        "response4": "space",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel fichier de configuration contient les informations sur les utilisateurs sous Linux ?",
+        "response1": "/etc/passwd",
+        "response2": "/etc/group",
+        "response3": "/etc/user",
+        "response4": "/etc/hosts",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de voir les processus en cours sous Linux ?",
+        "response1": "ps",
+        "response2": "top",
+        "response3": "process",
+        "response4": "status",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle du fichier /etc/fstab sous Linux ?",
+        "response1": "Gérer les partitions et systèmes de fichiers",
+        "response2": "Gérer les utilisateurs",
+        "response3": "Gérer les processus système",
+        "response4": "Gérer les configurations réseau",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil est utilisé pour la gestion des paquets sous Debian/Ubuntu ?",
+        "response1": "apt",
+        "response2": "yum",
+        "response3": "zypper",
+        "response4": "pacman",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de donner les permissions d'exécution à un fichier sous Linux ?",
+        "response1": "chmod +x",
+        "response2": "chown +x",
+        "response3": "setperm +x",
+        "response4": "perm +x",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel fichier est utilisé pour configurer les réseaux sous Linux ?",
+        "response1": "/etc/network/interfaces",
+        "response2": "/etc/netconfig",
+        "response3": "/etc/hosts",
+        "response4": "/etc/hostname",
+        "correct": "A",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle commande permet de redémarrer un système Linux ?",
+        "response1": "reboot",
+        "response2": "shutdown -r now",
+        "response3": "restart",
+        "response4": "init 6",
+        "correct": "B",
+        "category": "rose",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le principal objectif de l'intelligence artificielle ?",
+        "response1": "Imiter l'intelligence humaine",
+        "response2": "Créer des robots autonomes",
+        "response3": "Analyser des données",
+        "response4": "Construire des systèmes de gestion",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle technique est utilisée pour entraîner des modèles d'apprentissage automatique ?",
+        "response1": "Régression linéaire",
+        "response2": "Apprentissage supervisé",
+        "response3": "Analyse de données",
+        "response4": "Algorithmes heuristiques",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un réseau de neurones artificiels ?",
+        "response1": "Un algorithme de tri des données",
+        "response2": "Un modèle informatique inspiré du cerveau humain",
+        "response3": "Un système de gestion de base de données",
+        "response4": "Un processus de compression d'image",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel algorithme d'apprentissage automatique est utilisé pour la classification d'images ?",
+        "response1": "K-means",
+        "response2": "Arbre de décision",
+        "response3": "Réseaux de neurones convolutifs",
+        "response4": "Régression logistique",
+        "correct": "C",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la principale différence entre l'apprentissage supervisé et l'apprentissage non supervisé ?",
+        "response1": "L'apprentissage supervisé utilise des données étiquetées, l'autre non",
+        "response2": "L'apprentissage supervisé est plus rapide",
+        "response3": "L'apprentissage supervisé ne nécessite pas de données",
+        "response4": "Il n'y a pas de différence",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un agent intelligent dans le domaine de l'IA ?",
+        "response1": "Un programme qui exécute des tâches de manière autonome",
+        "response2": "Un robot physique qui interagit avec l'environnement",
+        "response3": "Un système de gestion de bases de données",
+        "response4": "Un modèle statistique de prédiction",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel type de machine learning est utilisé pour prédire des résultats continus ?",
+        "response1": "Apprentissage supervisé",
+        "response2": "Régression",
+        "response3": "Clustering",
+        "response4": "Apprentissage par renforcement",
+        "correct": "B",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal de l'apprentissage par renforcement ?",
+        "response1": "Maximiser une récompense en fonction des actions prises",
+        "response2": "Classer des objets dans différentes catégories",
+        "response3": "Analyser des données non étiquetées",
+        "response4": "Optimiser un réseau neuronal",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Qu'est-ce qu'un chatbot dans le domaine de l'IA ?",
+        "response1": "Un système automatisé de réponse aux questions des utilisateurs",
+        "response2": "Un robot physique qui interagit avec les humains",
+        "response3": "Un programme d'analyse d'image",
+        "response4": "Un moteur de recherche intelligent",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'un des défis majeurs de l'IA ?",
+        "response1": "Comprendre le langage humain",
+        "response2": "Calculer des rendements financiers",
+        "response3": "Stocker des données en temps réel",
+        "response4": "Créer des interfaces graphiques",
+        "correct": "A",
+        "category": "orange",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'objectif principal du DevOps ?",
+        "response1": "Automatiser les tests logiciels",
+        "response2": "Optimiser la collaboration entre développement et opérations",
+        "response3": "Mettre en place un système de gestion de projet",
+        "response4": "Sécuriser les données des utilisateurs",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil est principalement utilisé pour l'automatisation des déploiements dans DevOps ?",
+        "response1": "Git",
+        "response2": "Jenkins",
+        "response3": "Docker",
+        "response4": "Ansible",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle de Docker dans une pipeline DevOps ?",
+        "response1": "Gérer les bases de données",
+        "response2": "Exécuter des tests automatisés",
+        "response3": "Conteneuriser les applications",
+        "response4": "Surveiller les performances des serveurs",
+        "correct": "C",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quelle est la fonction d'un pipeline CI/CD dans DevOps ?",
+        "response1": "Automatiser les tests et les déploiements",
+        "response2": "Gérer les versions du code",
+        "response3": "Superviser la sécurité du réseau",
+        "response4": "Optimiser la gestion des bases de données",
+        "correct": "A",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est l'outil utilisé pour l'infrastructure as code (IaC) dans DevOps ?",
+        "response1": "Docker",
+        "response2": "Terraform",
+        "response3": "GitLab",
+        "response4": "Kubernetes",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est le rôle de Kubernetes dans DevOps ?",
+        "response1": "Gérer les conteneurs d'applications",
+        "response2": "Automatiser les tests d'applications",
+        "response3": "Surveiller les performances des serveurs",
+        "response4": "Automatiser les déploiements de base de données",
+        "correct": "A",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel concept est central dans le cadre d'un environnement DevOps ?",
+        "response1": "Séparation stricte entre développement et opérations",
+        "response2": "Collaboration continue entre équipes de développement et d'exploitation",
+        "response3": "Développement de logiciels uniquement en Python",
+        "response4": "Réduction de la taille des applications",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel outil DevOps permet de suivre et gérer le versionnement du code source ?",
+        "response1": "Jenkins",
+        "response2": "Git",
+        "response3": "Ansible",
+        "response4": "Kubernetes",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Qui devrait ramener des croissants ?",
+        "response1": "Hacène",
+        "response2": "Ludivine",
+        "response3": "Malek",
+        "response4": "Victor",
+        "correct": "C",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Quel est la côte de popularité d'Hacène au sein de la promotion ?",
+        "response1": "Basse",
+        "response2": "Très basse",
+        "response3": "Inexistante",
+        "response4": "La réponse D",
+        "correct": "B",
+        "category": "violet",
+        "seen": "False"
+    },
+    {
+        "question": "Rejouer",
+        "response1": "Rejouer",
+        "response2": "Rejouer",
+        "response3": "Rejouer",
+        "response4": "Rejouer",
+        "correct": "Rejouer",
+        "category": "blanc",
+        "seen": "False"
+    }
+]
